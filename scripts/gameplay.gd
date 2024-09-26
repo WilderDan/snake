@@ -21,3 +21,7 @@ func _on_food_area_entered(area: Area2D) -> void:
 		$Blood.spawn($Food.global_position)
 		spawn_food()
 		$Player.grow()
+
+
+func _on_background_music_finished() -> void:
+	$BackgroundMusic.play()

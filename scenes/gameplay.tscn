@@ -24,7 +24,6 @@ position = Vector2(580, 180)
 [node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_fgg1s")
 autoplay = true
-parameters/looping = true
 
 [node name="Blood" parent="." instance=ExtResource("6_ypo2d")]
 position = Vector2(-80, 80)
@@ -34,3 +33,4 @@ position = Vector2(580, 180)
 stream = ExtResource("7_khupp")
 
 [connection signal="area_entered" from="Food" to="." method="_on_food_area_entered"]
+[connection signal="finished" from="BackgroundMusic" to="." method="_on_background_music_finished"]

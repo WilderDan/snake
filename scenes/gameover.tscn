@@ -26,7 +26,7 @@ script = ExtResource("1_qs5fm")
 
 [node name="TileMap" parent="." instance=ExtResource("2_17y55")]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_otygn")
 autoplay = true
 parameters/looping = true
@@ -389,4 +389,5 @@ offset_right = 1037.0
 offset_bottom = 113.0
 texture = SubResource("AtlasTexture_vtf3h")
 
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

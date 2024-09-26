@@ -1,0 +1,9 @@
+res://scenes/main_menu.tscn
+res://scenes/gameplay.tscn
+res://scenes/gameover.tscn
+res://scenes/fancy_title.tscn
+res://scenes/body.tscn
+res://scripts/body.gd
+res://scripts/gameover.gd
+res://scripts/global_state.gd
+res://scenes/global_state.tscn

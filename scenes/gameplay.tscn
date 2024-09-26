@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbyt6d53xxy1i"]
+
+[ext_resource type="Script" path="res://scripts/gameplay.gd" id="1_av3s2"]
+[ext_resource type="AudioStream" uid="uid://doqyfjik2pgop" path="res://audio/Jungle-background.mp3" id="2_fgg1s"]
+[ext_resource type="PackedScene" uid="uid://ceintqlpig5lf" path="res://scenes/tile_map.tscn" id="2_t2h8y"]
+[ext_resource type="PackedScene" uid="uid://crvyn3r5po7u2" path="res://scenes/player.tscn" id="3_fhows"]
+[ext_resource type="PackedScene" uid="uid://b5sbndobeoofs" path="res://scenes/food.tscn" id="3_nqd2j"]
+[ext_resource type="PackedScene" uid="uid://cmkvlw0omljpj" path="res://scenes/blood.tscn" id="6_ypo2d"]
+[ext_resource type="AudioStream" uid="uid://ditqwshklljcd" path="res://audio/eat-sound.ogg" id="7_khupp"]
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource("1_av3s2")
+
+[node name="TileMap" parent="." instance=ExtResource("2_t2h8y")]
+
+[node name="Food" parent="." instance=ExtResource("3_nqd2j")]
+z_index = 2
+position = Vector2(-80, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_fhows")]
+z_index = 1
+position = Vector2(580, 180)
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_fgg1s")
+autoplay = true
+parameters/looping = true
+
+[node name="Blood" parent="." instance=ExtResource("6_ypo2d")]
+position = Vector2(-80, 80)
+
+[node name="EatSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(580, 180)
+stream = ExtResource("7_khupp")
+
+[connection signal="area_entered" from="Food" to="." method="_on_food_area_entered"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca3om7no38xi1"]
+
+[ext_resource type="Script" path="res://scripts/body.gd" id="1_pbsqo"]
+[ext_resource type="Texture2D" uid="uid://b74cdyce2q1tl" path="res://graphics/tileset.png" id="1_sr118"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogv52"]
+atlas = ExtResource("1_sr118")
+region = Rect2(0, 0, 120, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sve4k"]
+size = Vector2(34, 34)
+
+[node name="Body" type="Area2D"]
+position = Vector2(-10000, -10000)
+script = ExtResource("1_pbsqo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_ogv52")
+region_enabled = true
+region_rect = Rect2(0, 40, 40, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_sve4k")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

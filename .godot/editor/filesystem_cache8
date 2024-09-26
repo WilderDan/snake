@@ -1,0 +1,35 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1727341249
+::res://audio/::1727342124
+eat-sound.ogg::AudioStreamOggVorbis::7761007693564299379::1615232868::1726745557::1::::<><>::
+Jungle-background.mp3::AudioStreamMP3::8176402528432251499::1726648611::1726745557::1::::<><>::
+Sadness.ogg::AudioStreamOggVorbis::4979820445258198610::1727004068::1727004083::1::::<><>::
+snake-jazz.mp3::AudioStreamMP3::9179623409738060466::1714707888::1727342128::1::::<><>::
+::res://graphics/::1727098234
+blood.png::CompressedTexture2D::2828486075775717004::1727002884::1727002887::1::::<><>::
+snake.png::CompressedTexture2D::1686778826189746009::1727098194::1727098234::1::::<><>::
+Swamp Witch.ttf::FontFile::6969244042241785685::1259398846::1726746389::1::::<><>::
+tileset.png::CompressedTexture2D::4692458690213613097::1726748661::1726748665::1::::<><>::
+::res://scenes/::1727342060
+blood.tscn::PackedScene::5637047163950626883::1727106421::0::1::::<><>::uid://b74cdyce2q1tl::::res://graphics/tileset.png<>res://scripts/blood.gd
+body.tscn::PackedScene::4831517113429964366::1727342060::0::1::::<><>::res://scripts/body.gd<>uid://b74cdyce2q1tl::::res://graphics/tileset.png
+food.tscn::PackedScene::4529328903969338308::1727106421::0::1::::<><>::uid://b74cdyce2q1tl::::res://graphics/tileset.png<>res://scripts/food.gd<>uid://c6j7owof370ej::::res://graphics/Swamp Witch.ttf
+gameover.tscn::PackedScene::1524846712643357410::1727342060::0::1::::<><>::uid://c6j7owof370ej::::res://graphics/Swamp Witch.ttf<>res://scripts/gameover.gd<>uid://cc7i6d66863by::::res://audio/Sadness.ogg
+gameplay.tscn::PackedScene::2507363781120225796::1727342060::0::1::::<><>::res://scripts/gameplay.gd<>uid://doqyfjik2pgop::::res://audio/Jungle-background.mp3<>uid://ceintqlpig5lf::::res://scenes/tile_map.tscn<>uid://crvyn3r5po7u2::::res://scenes/player.tscn<>uid://b5sbndobeoofs::::res://scenes/food.tscn<>uid://cmkvlw0omljpj::::res://scenes/blood.tscn<>uid://ditqwshklljcd::::res://audio/eat-sound.ogg
+global_state.tscn::PackedScene::1120296555999387071::1727106421::0::1::::<><>::res://scripts/global_state.gd
+head.tscn::PackedScene::7729153009457070088::1727106421::0::1::::<><>::uid://b74cdyce2q1tl::::res://graphics/tileset.png<>res://scripts/head.gd
+main_menu.tscn::PackedScene::2156173387280351291::1727342060::0::1::::<><>::res://scripts/main_menu.gd<>uid://ceintqlpig5lf::::res://scenes/tile_map.tscn<>uid://c6j7owof370ej::::res://graphics/Swamp Witch.ttf<>uid://diecaycnxilee::::res://scenes/head.tscn<>uid://ca3om7no38xi1::::res://scenes/body.tscn<>uid://bxt1i6q7t6yed::::res://scenes/tail.tscn
+player.tscn::PackedScene::6010885563514341539::1727106421::0::1::::<><>::uid://diecaycnxilee::::res://scenes/head.tscn<>res://scripts/player.gd<>uid://bxt1i6q7t6yed::::res://scenes/tail.tscn
+tile_map.tscn::PackedScene::5070935873019910723::1727339001::0::1::::<><>::uid://b74cdyce2q1tl::::res://graphics/tileset.png
+tail.tscn::PackedScene::4041581847279444243::1727106421::0::1::::<><>::res://scripts/tail.gd<>uid://b74cdyce2q1tl::::res://graphics/tileset.png
+::res://scripts/::1727340281
+blood.gd::GDScript::-1::1726996831::0::1::::<>Sprite2D<>::
+body.gd::GDScript::-1::1727340281::0::1::::<>Area2D<>::
+food.gd::GDScript::-1::1727097825::0::1::::<>Area2D<>::
+gameover.gd::GDScript::-1::1727097852::0::1::::<>Control<>::
+gameplay.gd::GDScript::-1::1727097782::0::1::::<>Node2D<>::
+global_state.gd::GDScript::-1::1727007194::0::1::::<>Node2D<>::
+head.gd::GDScript::-1::1727097801::0::1::::<>Area2D<>::
+main_menu.gd::GDScript::-1::1727097943::0::1::::<>Control<>::
+player.gd::GDScript::-1::1727098985::0::1::::<>Node2D<>::
+tail.gd::GDScript::-1::1727097852::0::1::::<>Node2D<>::

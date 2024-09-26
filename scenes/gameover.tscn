@@ -1,0 +1,392 @@
+[gd_scene load_steps=7 format=3 uid="uid://vywac8ggm26y"]
+
+[ext_resource type="FontFile" uid="uid://c6j7owof370ej" path="res://graphics/Swamp Witch.ttf" id="1_ngujt"]
+[ext_resource type="Script" path="res://scripts/gameover.gd" id="1_qs5fm"]
+[ext_resource type="PackedScene" uid="uid://ceintqlpig5lf" path="res://scenes/tile_map.tscn" id="2_17y55"]
+[ext_resource type="Texture2D" uid="uid://b74cdyce2q1tl" path="res://graphics/tileset.png" id="2_e6wv3"]
+[ext_resource type="AudioStream" uid="uid://cc7i6d66863by" path="res://audio/Sadness.ogg" id="3_otygn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtf3h"]
+atlas = ExtResource("2_e6wv3")
+region = Rect2(160, 160, 40, 40)
+margin = Rect2(0, -1, 0, 0)
+
+[node name="Gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = -15.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qs5fm")
+
+[node name="TileMap" parent="." instance=ExtResource("2_17y55")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_otygn")
+autoplay = true
+parameters/looping = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -179.5
+offset_right = 270.0
+offset_bottom = 94.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="TitleText" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_ngujt")
+theme_override_font_sizes/normal_font_size = 108
+text = "   GAMEOVER"
+fit_content = true
+
+[node name="ResultText" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+fit_content = true
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play Again"
+
+[node name="Grave2" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 77.0
+offset_top = 473.0
+offset_right = 157.0
+offset_bottom = 553.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave3" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 237.0
+offset_top = 478.0
+offset_right = 317.0
+offset_bottom = 558.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave14" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 157.0
+offset_top = 433.0
+offset_right = 237.0
+offset_bottom = 513.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave15" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 77.0
+offset_top = 393.0
+offset_right = 157.0
+offset_bottom = 473.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave16" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 237.0
+offset_top = 393.0
+offset_right = 317.0
+offset_bottom = 473.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave17" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 157.0
+offset_top = 353.0
+offset_right = 237.0
+offset_bottom = 433.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave18" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 237.0
+offset_top = 153.0
+offset_right = 317.0
+offset_bottom = 233.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave19" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 237.0
+offset_top = 73.0
+offset_right = 317.0
+offset_bottom = 153.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave20" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 877.0
+offset_top = 393.0
+offset_right = 957.0
+offset_bottom = 473.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave22" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 877.0
+offset_top = 313.0
+offset_right = 957.0
+offset_bottom = 393.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave23" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 877.0
+offset_top = 233.0
+offset_right = 957.0
+offset_bottom = 313.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave24" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 877.0
+offset_top = 153.0
+offset_right = 957.0
+offset_bottom = 233.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave25" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 877.0
+offset_top = 73.0
+offset_right = 957.0
+offset_bottom = 153.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave21" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1037.0
+offset_top = 393.0
+offset_right = 1117.0
+offset_bottom = 473.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave26" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1037.0
+offset_top = 313.0
+offset_right = 1117.0
+offset_bottom = 393.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave27" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1037.0
+offset_top = 233.0
+offset_right = 1117.0
+offset_bottom = 313.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave28" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1037.0
+offset_top = 153.0
+offset_right = 1117.0
+offset_bottom = 233.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave29" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1037.0
+offset_top = 73.0
+offset_right = 1117.0
+offset_bottom = 153.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave4" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 157.0
+offset_top = 193.0
+offset_right = 237.0
+offset_bottom = 273.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave5" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 77.0
+offset_top = 153.0
+offset_right = 157.0
+offset_bottom = 233.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave6" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 237.0
+offset_top = 233.0
+offset_right = 317.0
+offset_bottom = 313.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave13" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 77.0
+offset_top = 233.0
+offset_right = 157.0
+offset_bottom = 313.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave7" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 77.0
+offset_top = 73.0
+offset_right = 157.0
+offset_bottom = 153.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave8" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 157.0
+offset_top = 113.0
+offset_right = 237.0
+offset_bottom = 193.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave9" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 877.0
+offset_top = 478.0
+offset_right = 957.0
+offset_bottom = 558.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave12" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 157.0
+offset_top = 33.0
+offset_right = 237.0
+offset_bottom = 113.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave10" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1037.0
+offset_top = 473.0
+offset_right = 1117.0
+offset_bottom = 553.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave11" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 957.0
+offset_top = 433.0
+offset_right = 1037.0
+offset_bottom = 513.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave30" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 957.0
+offset_top = 353.0
+offset_right = 1037.0
+offset_bottom = 433.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave31" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 957.0
+offset_top = 273.0
+offset_right = 1037.0
+offset_bottom = 353.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave35" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 157.0
+offset_top = 273.0
+offset_right = 237.0
+offset_bottom = 353.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave36" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 77.0
+offset_top = 313.0
+offset_right = 157.0
+offset_bottom = 393.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave37" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 237.0
+offset_top = 313.0
+offset_right = 317.0
+offset_bottom = 393.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave32" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 957.0
+offset_top = 193.0
+offset_right = 1037.0
+offset_bottom = 273.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave33" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 957.0
+offset_top = 113.0
+offset_right = 1037.0
+offset_bottom = 193.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[node name="Grave34" type="TextureRect" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 957.0
+offset_top = 33.0
+offset_right = 1037.0
+offset_bottom = 113.0
+texture = SubResource("AtlasTexture_vtf3h")
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

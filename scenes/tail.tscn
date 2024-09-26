@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxt1i6q7t6yed"]
+
+[ext_resource type="Script" path="res://scripts/tail.gd" id="1_5uhjn"]
+[ext_resource type="Texture2D" uid="uid://b74cdyce2q1tl" path="res://graphics/tileset.png" id="1_bnti2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx5bw"]
+atlas = ExtResource("1_bnti2")
+region = Rect2(0, 0, 40, 40)
+
+[node name="Tail" type="Node2D"]
+script = ExtResource("1_5uhjn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_dx5bw")

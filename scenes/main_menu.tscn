@@ -1,0 +1,164 @@
+[gd_scene load_steps=8 format=3 uid="uid://5yp4i6xe3gr8"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_grd4o"]
+[ext_resource type="PackedScene" uid="uid://ceintqlpig5lf" path="res://scenes/tile_map.tscn" id="2_j3hqf"]
+[ext_resource type="FontFile" uid="uid://c6j7owof370ej" path="res://graphics/Swamp Witch.ttf" id="3_68hp4"]
+[ext_resource type="PackedScene" uid="uid://diecaycnxilee" path="res://scenes/head.tscn" id="4_gnw1o"]
+[ext_resource type="PackedScene" uid="uid://ca3om7no38xi1" path="res://scenes/body.tscn" id="5_bw3li"]
+[ext_resource type="PackedScene" uid="uid://bxt1i6q7t6yed" path="res://scenes/tail.tscn" id="6_fbqeg"]
+[ext_resource type="AudioStream" uid="uid://d31xb6gxri5h3" path="res://audio/snake-jazz.mp3" id="7_a0yxj"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_grd4o")
+
+[node name="TileMap" parent="." instance=ExtResource("2_j3hqf")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.0
+offset_top = -152.0
+offset_right = 128.0
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Title" type="RichTextLabel" parent="VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_68hp4")
+theme_override_font_sizes/normal_font_size = 108
+text = "  Snake
+
+"
+fit_content = true
+autowrap_mode = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Play"
+
+[node name="Head" parent="." instance=ExtResource("4_gnw1o")]
+position = Vector2(440, 440)
+rotation = 4.71239
+
+[node name="Head2" parent="." instance=ExtResource("4_gnw1o")]
+position = Vector2(720, 440)
+rotation = 1.5708
+
+[node name="Body" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(400, 440)
+sprite_region = Rect2(40, 0, 40, 40)
+
+[node name="Body2" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(400, 480)
+sprite_region = Rect2(40, 40, 40, 40)
+
+[node name="Body10" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(760, 440)
+sprite_region = Rect2(80, 40, 40, 40)
+
+[node name="Body11" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(760, 400)
+sprite_region = Rect2(80, 0, 40, 40)
+
+[node name="Body3" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(440, 480)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body4" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(480, 480)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body5" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(520, 480)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body6" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(560, 480)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body7" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(600, 480)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body8" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(640, 480)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body9" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(680, 480)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body20" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(720, 480)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body21" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(760, 480)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body12" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(720, 400)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body13" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(680, 400)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body14" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(640, 400)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body15" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(600, 400)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body16" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(560, 400)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body17" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(520, 400)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body18" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(480, 400)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body19" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(440, 400)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Body22" parent="." instance=ExtResource("5_bw3li")]
+position = Vector2(400, 400)
+sprite_region = Rect2(80, 80, 40, 40)
+
+[node name="Tail" parent="." instance=ExtResource("6_fbqeg")]
+position = Vector2(800, 480)
+rotation = 1.5708
+
+[node name="Tail2" parent="." instance=ExtResource("6_fbqeg")]
+position = Vector2(360, 400)
+rotation = 4.71239
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_a0yxj")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

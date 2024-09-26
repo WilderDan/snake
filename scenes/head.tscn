@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://diecaycnxilee"]
+
+[ext_resource type="Texture2D" uid="uid://b74cdyce2q1tl" path="res://graphics/tileset.png" id="1_2kt85"]
+[ext_resource type="Script" path="res://scripts/head.gd" id="1_nlvaq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3h3a"]
+atlas = ExtResource("1_2kt85")
+region = Rect2(0, 80, 80, 40)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5h0st"]
+radius = 18.0
+height = 38.0
+
+[node name="Head" type="Area2D"]
+script = ExtResource("1_nlvaq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_t3h3a")
+region_enabled = true
+region_rect = Rect2(0, 0, 40, 40)
+
+[node name="AnimationTimer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_5h0st")
+
+[connection signal="timeout" from="AnimationTimer" to="." method="_on_animation_timer_timeout"]

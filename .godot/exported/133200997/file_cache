@@ -1,0 +1,10 @@
+res://scenes/blood.tscn::4ef09a7316235e07f07ec596c2d7e29f::1727011894::res://.godot/exported/133200997/export-e2beba27572dc24508562a1d3002c386-blood.scn
+res://scenes/food.tscn::0a2c0447ad8cc41e9586e64d540428ff::1727011894::res://.godot/exported/133200997/export-9454b54796fb1c0f457509f0cd010127-food.scn
+res://scenes/gameplay.tscn::e1d06a385354b26960da006cd6790547::1727011894::res://.godot/exported/133200997/export-073adc752d2c0a165c14d2303ed092c9-gameplay.scn
+res://scenes/head.tscn::5e2084264135044ce0f6ddd8dabe8f47::1727011894::res://.godot/exported/133200997/export-339ebd94c0d729dc5b2ace28ebd12966-head.scn
+res://scenes/player.tscn::c4999970828e819bbf05f9e95e22d1ff::1727011894::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/body.tscn::362423086ff1569c3de7a629b120afdb::1727011894::res://.godot/exported/133200997/export-8974ad1652e4291785f5709f63ebf6dc-body.scn
+res://scenes/gameover.tscn::e2c43341db296a870aa78287b1764000::1727011894::res://.godot/exported/133200997/export-e4f388fbff730b271b2c0f6514b3896d-gameover.scn
+res://scenes/global_state.tscn::7e971eff8b3424ec7cb70f4a6580f8bc::1727011894::res://.godot/exported/133200997/export-8a04ff4ec53e6ef17551e6ef5e2c45b2-global_state.scn
+res://scenes/main_menu.tscn::6b59caa16c1ad2ee844fad9630bd905b::1727011894::res://.godot/exported/133200997/export-ea5c6ad4629af728dc514cefde332394-main_menu.scn
+res://scenes/tail.tscn::da53b9bcf4734ca999cd811a8c567658::1727011894::res://.godot/exported/133200997/export-952b88893e57567996454df7d46e333b-tail.scn

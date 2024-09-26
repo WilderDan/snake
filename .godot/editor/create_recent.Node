@@ -1,0 +1,13 @@
+HBoxContainer
+TextureRect
+RichTextLabel
+VBoxContainer
+AudioStreamPlayer2D
+Button
+Sprite2D
+Timer
+CollisionShape2D
+Area2D
+AnimatedSprite2D
+CharacterBody2D
+TileMap

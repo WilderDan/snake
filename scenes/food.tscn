@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5sbndobeoofs"]
+
+[ext_resource type="Texture2D" uid="uid://b74cdyce2q1tl" path="res://graphics/tileset.png" id="1_26aq7"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="1_viewq"]
+[ext_resource type="FontFile" uid="uid://c6j7owof370ej" path="res://graphics/Swamp Witch.ttf" id="2_g7oqq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xu7n5"]
+atlas = ExtResource("1_26aq7")
+region = Rect2(160, 80, 40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77l57"]
+size = Vector2(27, 22)
+
+[node name="Food" type="Area2D"]
+script = ExtResource("1_viewq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_xu7n5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_77l57")
+
+[node name="HelpText" type="RichTextLabel" parent="."]
+offset_left = -28.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 14.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_g7oqq")
+theme_override_font_sizes/bold_italics_font_size = 1
+theme_override_font_sizes/normal_font_size = 36
+text = "Help!"
+autowrap_mode = 0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmkvlw0omljpj"]
+
+[ext_resource type="Texture2D" uid="uid://b74cdyce2q1tl" path="res://graphics/tileset.png" id="1_nblm3"]
+[ext_resource type="Script" path="res://scripts/blood.gd" id="2_e76ib"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8r8k"]
+atlas = ExtResource("1_nblm3")
+region = Rect2(121, 161, 40, 40)
+
+[node name="Blood" type="Sprite2D"]
+scale = Vector2(1.8, 1.8)
+texture = SubResource("AtlasTexture_v8r8k")
+script = ExtResource("2_e76ib")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -7,3 +7,4 @@ res://scripts/body.gd
 res://scripts/gameover.gd
 res://scripts/global_state.gd
 res://scenes/global_state.tscn
+res://scripts/player.gd

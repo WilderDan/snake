@@ -1,13 +1,17 @@
 extends Node2D
 
+const MIN_DRAG = 100
+
 var direction: Vector2
+var swipe_start = null
 
 var body_scene = preload("res://scenes/body.tscn")
 var body = []
 
 func _ready():
 	direction = Vector2.DOWN
-	
+
+
 func _process(_delta):
 	var new_direction = direction
 	
@@ -25,6 +29,38 @@ func _process(_delta):
 	
 	direction = new_direction
 
+func _input(event):
+   # Mouse in viewport coordinates. 
+	if event is InputEventMouseButton:
+		if swipe_start == null:
+			swipe_start = event.position
+		else:
+			var new_direction = calculate_swipe_direction(event.position)
+			swipe_start = null
+			if new_direction == (-1 * direction):
+				get_tree().change_scene_to_file("res://scenes/gameover.tscn")
+			direction = new_direction
+		
+func calculate_swipe_direction(swipe_end):
+	if swipe_start == null:
+		return direction
+		
+	var swipe = swipe_end - swipe_start
+	print(swipe)
+	  
+	if abs(swipe.x) > MIN_DRAG:
+		if swipe.x > 0:
+			return Vector2.RIGHT
+		else:
+			return Vector2.LEFT
+	elif abs(swipe.y) > MIN_DRAG:
+		if swipe.y > 0:
+			return Vector2.DOWN
+		else:
+			return Vector2.UP
+			
+	return direction
+	
 func _on_move_tick_timeout() -> void:
 	$Head.direction = direction
 	
